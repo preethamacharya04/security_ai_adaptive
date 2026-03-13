@@ -268,33 +268,9 @@
     </div>
     
     <div class="container">
-        <div class="risk-indicator risk-{{ risk_level }}">
-            <h3>🔒 Session Security Status</h3>
-            <div class="risk-score">
-                <div class="score-badge {{ risk_level }}">
-                    {{ risk_score }}
-                </div>
-                <div class="score-info">
-                    <div class="score-label">Risk Level: {{ risk_level|upper }}</div>
-                    <p style="color: #666; font-size: 14px; margin-top: 5px;">
-                        {% if risk_level == 'low' %}
-                        Your session appears normal. All systems secure.
-                        {% elif risk_level == 'medium' %}
-                        Some unusual patterns detected. Monitoring activity.
-                        {% else %}
-                        Suspicious activity detected. Enhanced security active.
-                        {% endif %}
-                    </p>
-                </div>
-            </div>
-        </div>
         
-        {% if risk_level == 'high' %}
-        <div class="info-message">
-            ⚠️ <strong>Security Notice:</strong> This session has triggered our anomaly detection system. 
-            For your protection, you're viewing a simulated environment.
-        </div>
-        {% endif %}
+        
+        
         
         <div class="account-card">
             <div class="account-header">
